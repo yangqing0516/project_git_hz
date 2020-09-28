@@ -5,9 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>bswqh_app</title>
+    <script>
+        //	计算rem
+        var desW = 750;
+        function refreshRem() {
+            var winW = document.documentElement.clientWidth;
+            document.documentElement.style.fontSize = winW / desW * 100 + 'px';
+        }
+        refreshRem();
+        window.onload = () => {
+            const body = document.getElementsByTagName('body')[0]
+            body.style.height = body.clientHeight + 'px';
+        }
+    </script>
 </head>
 
 <body>
+    <!-- <router-view></router-view> -->
     <div id="app"></div>
     <!-- built files will be auto injected -->
 </body>
